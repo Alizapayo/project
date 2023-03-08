@@ -21,7 +21,7 @@ function App() {
     Axios.post("http://localhost:3333/create", {
       name: name,
       user: user,
-      password:password
+      password: password
       
     }).then(() => {
       setUserList([
@@ -29,7 +29,7 @@ function App() {
         {
           name: name,
           user: user,
-          password:password
+          password: password
         },
       ]);
     });
@@ -58,11 +58,11 @@ function App() {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="user">user:</label>
+            <label htmlFor="User">User:</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Enter user"
+              placeholder="Enter User"
               onChange={(event) => {
                 setUser(event.target.value)
               }}
@@ -70,26 +70,27 @@ function App() {
           </div>
 
           <div className="mb-3">
-            <label htmlFor="password">password:</label>
+            <label htmlFor="Password">Password:</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Enter password"
+              placeholder="Enter Password"
               onChange={(event) => {
                 setPassword(event.target.value)
               }}
             />
           </div>
          
+         
           <button onClick={addUser} class="btn btn-success">
-            SAVE
+            Save
           </button>
         </form>
       </div>
       <hr />
       <div className="employees">
         <button class="btn btn-primary" onClick={getUser}>
-          SHOW DATA
+          Show data
         </button>
         <br />
         <br />
@@ -100,6 +101,8 @@ function App() {
                 <p className="card-text">Name: {val.name}</p>
                 <p className="card-text">User: {val.user}</p>
                 <p className="card-text">Password: {val.password}</p>
+
+               
               </div>
             </div>
           );
